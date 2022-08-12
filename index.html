@@ -7,19 +7,21 @@
     <meta name="description"
         content="My first website, a mere byproduct of playing around with the code." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wannabe web dev</title>
+    <title>Wannabe web dev</title>
     <!-- <link rel="icon" href="jok.png" type="image/x-icon" /> -->
     <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+    <div id="facesContainer">
+        <img id="bigFace" src="face.gif" alt="face">
+    </div>
+    <img id="smallFace" src="face.png" alt="face" onclick="dropBigFace()">
+    
     <div id="container">
         <img id="jungleJPG" src="jungle.jpg" alt="jungle">
-        <!-- <img id="snakeGIF" src="snake.gif" alt="jungle"> -->
         <img id="cockroachGIF" class="cockroachAnimation" src="cockroach.gif" alt="cockroach">
-
-        <!-- class="bugShown" -->
     </div>
 
 </body>
