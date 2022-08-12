@@ -27,9 +27,9 @@ body {
 
 .cockroachAnimation {
     animation-name: cockroachWalks;
-    animation-duration: 22s;
+    animation-duration: 20s;
     animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in;
 }
 
 @keyframes cockroachWalks {
@@ -38,7 +38,7 @@ body {
         left: -15vw;
     }
     100% {
-        bottom: 200vw;
+        bottom: 220vw;
         left: -15vw;
     }
 }  
