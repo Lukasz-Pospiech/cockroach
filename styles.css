@@ -3,6 +3,55 @@ body {
     margin: 0;
 }
 
+#smallFace {
+    position: fixed;
+    height: 8vh;
+    top: 1vw;
+    right: 1vw;
+    z-index: 20;
+}
+
+#facesContainer {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    text-align: center;
+    z-index: 15;
+    visibility: hidden; 
+    overflow: clip;
+    opacity: 0;
+    transition: opacity 0.3s;
+} 
+
+#bigFace {
+    position: absolute;
+    top: -100vh;
+    left: 1vw;
+    width: 98vw;
+    visibility: visible; 
+    opacity: 1;
+}
+
+.bigFaceAnimation {
+    animation-name: bigFaceFallsDown;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bigFaceFallsDown {
+    0% {
+        top: -100vh;
+        left: 1vw;
+    }
+    100% {
+        top: 6vh;
+        left: 1vw;
+    }
+} 
+
 #container {
     width: 100vw;
     height: 100vh;
