@@ -1,0 +1,53 @@
+body {
+    background-color: grey;
+    margin: 0;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(118, 163, 163);
+    overflow: clip;
+    position: absolute;
+}
+
+#jungleJPG {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    /* position: absolute; */
+    /* visibility: visible; */
+}
+
+/* #snakeGIF {
+    position: absolute;
+    width: 100%;
+    top: 0%;
+} */
+
+#cockroachGIF {
+    position: absolute;
+    /* visibility: visible; */
+    width: 40vw;
+    bottom: -50vw;
+    left: -15vw;
+    rotate: 90deg;
+} 
+
+.cockroachAnimation {
+    animation-name: cockroachWalks;
+    animation-duration: 17s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes cockroachWalks {
+    0% {
+        bottom: -50vw;
+        left: -15vw;
+    }
+    100% {
+        bottom: 150vw;
+        left: -15vw;
+    }
+}  */
