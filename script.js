@@ -27,4 +27,47 @@ function dropBigFace() {
 }
 
 
+function typeWriterEffect() {
+    const text1 = "Hello World! My name is Lukasz and I created this website. From scratch. Using only raw HTML/CSS/JS (no libraries nor frameworks).";
+    const text2 = "This webpage doesn\’t serve any particular purpose. I created it for fun… improving my coding skills by the way.";
+    const text3 = "As you have surely noticed by now, this page contains some bugs… Well I\’m still learning the very basics of web development.";
+    const text4 = "Bugs are bugging me in Thailand where I currently live…. I have to deal with bugs in my bungalow and bugs in my code.";
+    const text5 = "Fortunately, I can control the bugs on my page. It\’s my website, I\’m the puppet master here, they will do as I say!";
+    const text6 = "Don\’t you believe me? Check this out…"; 
+
+    function changeSentence(text) {
+        let lapContainer = document.getElementById("laptopContainer");
+        let gif = `<img id="laptopGif" src="typing.gif" alt="typing">`;
+        let pic = `<img id="laptopPic" src="laptopPic.jpg" alt="laptop">`;
+        let empty = `<div id="laptopScreenEmpty"></div>`;
+        lapContainer.innerHTML = gif + empty; 
+        let lapScreenEmpty = document.getElementById("laptopScreenEmpty");
+        let i = 0; 
+        (function typeWriter() {
+            if (i < text.length) {
+              lapScreenEmpty.innerHTML += text.charAt(i);
+              i++;
+              setTimeout(typeWriter, 100);
+            } 
+        })();
+        setTimeout(freezeHands, (text.length*100 + 1000));
+        function freezeHands() {
+            lapContainer.innerHTML = pic + `<div id="laptopScreen">${text}</div>`;
+        }
+    }
+    setTimeout(changeSentence, 200, text1);
+
+    setTimeout(changeSentence, text1.length*100 + 1000 + 5000, text2);
+
+    setTimeout(changeSentence, text1.length*100 + 1000 + 5000 + text2.length*100 + 1000 + 5000, text3);
+
+    setTimeout(changeSentence, text1.length*100 + 1000 + 5000 + text2.length*100 + 1000 + 5000 + text3.length*100 + 1000 + 5000, text4);
+
+    setTimeout(changeSentence, text1.length*100 + 1000 + 5000 + text2.length*100 + 1000 + 5000 + text3.length*100 + 1000 + 5000 + text4.length*100 + 1000 + 5000, text5);
+
+    setTimeout(changeSentence, text1.length*100 + 1000 + 5000 + text2.length*100 + 1000 + 5000 + text3.length*100 + 1000 + 5000 + text4.length*100 + 1000 + 5000 + text5.length*100 + 1000 + 5000, text6);
+
+
+}
+
 
