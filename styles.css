@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: grey;
     margin: 0;
@@ -66,6 +70,8 @@ body {
     height: 100vh;
 }
 
+
+/* COCKROACH*/
 #cockroachGIF {
     position: absolute;
     width: 40vw;
@@ -91,3 +97,74 @@ body {
         left: -15vw;
     }
 }  
+
+/* LAPTOP */
+#laptopContainer {
+    position: absolute;
+    bottom: 1vw;
+    right: 1vw;
+    width: 52vw;
+    height: 48vw;
+    background-color: black;
+    border: 1vw solid black;
+    border-radius: 5%;
+    overflow: clip;
+}
+
+#laptopPic {
+    position: absolute;
+    width: 51vw;
+    height: 47vw;
+    border: 1vw solid black;
+    border-radius: 5%;
+}
+
+#laptopGif {
+    position: absolute;
+    width: 51vw;
+    height: 47vw;
+    border: 1vw solid black;
+    border-radius: 5%;
+}
+
+#laptopScreen {
+    position: absolute;
+    top: 5vw;
+    left: 3vw;
+    width: 44.5vw;
+    height: 15vh;
+    background-color: #ede1d1;
+    padding: 1vw;
+    color: black;
+    font-size: 3vw;
+    font-family: 'Roboto', monospace;
+    text-align: left;
+} 
+
+#laptopScreenEmpty {
+    position: absolute;
+    top: 5vw;
+    left: 3vw;
+    width: 44.5vw;
+    height: 15vh;
+    background-color: #ede1d1;
+    padding: 1vw;
+    color: black;
+    font-size: 3vw;
+    font-family: 'Roboto', monospace;
+    text-align: left; 
+}
+
+#empty {
+    position: absolute;
+    top: 5vw;
+    left: 3vw;
+    width: 44.5vw;
+    height: 15vh;
+    background-color: #ede1d1;
+    padding: 1vw;
+    color: black;
+    font-size: 3vw;
+    font-family: 'Roboto', monospace;
+    text-align: left;
+}
