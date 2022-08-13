@@ -14,7 +14,7 @@ body {
 
 #smallFace {
     position: fixed;
-    height: 8vh;
+    height: calc(var(--vh, 1vh) * 8);
     top: 1vw;
     right: 1vw;
     z-index: 20;
@@ -23,7 +23,7 @@ body {
 #facesContainer {
     position: fixed;
     width: 100vw;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     background-color: black;
     text-align: center;
     z-index: 15;
@@ -35,7 +35,7 @@ body {
 
 #bigFace {
     position: absolute;
-    top: -100vh;
+    top: calc(var(--vh, 1vh) * -100);
     left: 1vw;
     width: 98vw;
     visibility: visible; 
@@ -52,18 +52,18 @@ body {
 
 @keyframes bigFaceFallsDown {
     0% {
-        top: -100vh;
+        top: calc(var(--vh, 1vh) * -100);
         left: 1vw;
     }
     100% {
-        top: 6vh;
+        top: calc(var(--vh, 1vh) * 6);
         left: 1vw;
     }
 } 
 
 #container {
     width: 100vw;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     background-color: rgb(118, 163, 163);
     overflow: clip;
     position: absolute;
@@ -72,7 +72,7 @@ body {
 #jungleJPG {
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 
