@@ -76,6 +76,15 @@ body {
 }
 
 
+/* CHAMELEON */
+#chameleon {
+    position: absolute;
+    width: 100%;
+    top: 0; 
+    left: 0; 
+}
+
+
 /* COCKROACH*/
 #cockroachGIF {
     position: absolute;
@@ -139,7 +148,7 @@ body {
     top: 5vw;
     left: 3vw;
     width: 52.5vw;
-    height: 31vw;
+    height: 29vw;
     background-color: #ede1d1;
     padding: 1vw;
     color: black;
@@ -153,7 +162,7 @@ body {
     top: 5vw;
     left: 3vw;
     width: 52.5vw;
-    height: 31vw;
+    height: 29vw;
     background-color: #ede1d1;
     padding: 1vw;
     color: black;
@@ -167,7 +176,7 @@ body {
     top: 5vw;
     left: 3vw;
     width: 52.5vw;
-    height: 31vw;
+    height: 29vw;
     background-color: #ede1d1;
     padding: 1vw;
     color: black;
