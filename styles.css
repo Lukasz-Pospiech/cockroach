@@ -13,10 +13,10 @@
 #wrongOrientationWarningDIV {
     display: none;
     position: fixed;
-    top: 20vw;
-    left: 20vw;
-    width: 70vw;
-    height: 70vw;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 200;
     background-color: black;
     padding: 10vw;
