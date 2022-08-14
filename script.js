@@ -1,12 +1,21 @@
 //LOCK SCREEN ORIENTATION ON PHONES (ONLY PORTRAIT ORIENTATION) 
 
-if (screen.orientation) { // Property doesn't exist on screen in IE11   
-    screen.orientation.addEventListener("change", showWarning);
+function showWarning() {
+    // if (screen.orientation) { // Property doesn't exist on screen in IE11   
+        screen.orientation.addEventListener("change", showWarning);
+    
+    function showWarning() {
+        let warning = document.getElementById("wrongOrientationWarningDIV");
+        if (warning.style.display === "none") {
+            warning.style.display = "block";
+        } 
+        else if (warning.style.display === "block") {
+            warning.style.display = "none";
+        }
+        // document.getElementById("wrongOrientationWarningDIV").style.display = "block"; 
+    }
 }
 
-function showWarning() {
-    document.getElementById("wrongOrientationWarningDIV").style.display = "block"; 
-}
 
 // function lockOrientation() {
 //     // GO INTO FULL SCREEN FIRST
