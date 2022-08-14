@@ -1,4 +1,13 @@
 //LOCK SCREEN ORIENTATION ON PHONES (ONLY PORTRAIT ORIENTATION) 
+
+if (screen.orientation) { // Property doesn't exist on screen in IE11   
+    screen.orientation.addEventListener("change", showWarning);
+}
+
+function showWarning() {
+    document.getElementById("wrongOrientationWarningDIV").style.display = "block"; 
+}
+
 // function lockOrientation() {
 //     // GO INTO FULL SCREEN FIRST
 //     let de = document.documentElement;  //returns html element
