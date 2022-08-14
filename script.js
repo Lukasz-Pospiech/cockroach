@@ -1,3 +1,6 @@
+//LOCK SCREEN ORIENTATION ON PHONES (ONLY PORTRAIT ORIENTATION) 
+screen.orientation.lock("portrait-primary");
+
 //Dealing with viewport height issue (when browser address bar hides the viewport gets higher - we don't want that)
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -7,7 +10,7 @@ window.addEventListener('resize', () => {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   });
 
-
+//MENU BIG FACE JAW DROP
 function dropBigFace() {
     const container = document.getElementById("facesContainer");
     const containerOpacity = window.getComputedStyle(container).opacity;
@@ -36,13 +39,13 @@ function dropBigFace() {
     }
 }
 
-
+//LAPTOP TYPING EFFECT
 function typeWriterEffect() {
     const text1 = "Hello World! My name is Lukasz and I created this website. From scratch. Using only raw HTML/CSS/JS (no libraries nor frameworks).";
     const text2 = "This webpage doesn\’t serve any particular purpose. I created it for fun… improving my coding skills by the way.";
     const text3 = "As you have surely noticed by now, this page contains some bugs… Well I\’m still learning the very basics of web development.";
     const text4 = "Bugs are bugging me in Thailand where I currently live…. I have to deal with bugs in my bungalow and bugs in my code.";
-    const text5 = "Fortunately, I can control the bugs on my page. It\’s my website, I\’m the puppet master here, they will do as I say!";
+    const text5 = "Fortunately, I can control all the creatures on my page. I\’m the puppet master here, they will do as I say!";
     const text6 = "Don\’t you believe me? Check this out…"; 
 
     function changeSentence(text) {
@@ -66,17 +69,11 @@ function typeWriterEffect() {
         }
     }
     setTimeout(changeSentence, 200, text1);
-
     setTimeout(changeSentence, text1.length*100 + 1000 + 5000, text2);
-
     setTimeout(changeSentence, text1.length*100 + 1000 + 5000 + text2.length*100 + 1000 + 5000, text3);
-
     setTimeout(changeSentence, text1.length*100 + 1000 + 5000 + text2.length*100 + 1000 + 5000 + text3.length*100 + 1000 + 5000, text4);
-
     setTimeout(changeSentence, text1.length*100 + 1000 + 5000 + text2.length*100 + 1000 + 5000 + text3.length*100 + 1000 + 5000 + text4.length*100 + 1000 + 5000, text5);
-
     setTimeout(changeSentence, text1.length*100 + 1000 + 5000 + text2.length*100 + 1000 + 5000 + text3.length*100 + 1000 + 5000 + text4.length*100 + 1000 + 5000 + text5.length*100 + 1000 + 5000, text6);
-
 
 }
 
