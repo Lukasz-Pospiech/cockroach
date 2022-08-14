@@ -9,21 +9,28 @@
 //     screen.orientation.lock("portrait-primary");
 // }
 
-function lockOrientation() {
-    if(document.querySelector("body").requestFullscreen) {
-        document.querySelector("body").requestFullscreen();
-    }
-    else if(document.querySelector("body").webkitRequestFullScreen) {
-        document.querySelector("body").webkitRequestFullScreen(); 
-    }
-    else if(document.querySelector("body").mozRequestFullScreen) {
-        document.querySelector("body").mozRequestFullScreen(); 
-    }
-    else if(document.querySelector("body").msRequestFullscreen) {
-        document.querySelector("body").msRequestFullscreen(); 
-    }    
-    window.screen.orientation.lock("portrait");
-}
+// function lockOrientation() {
+//     if(document.querySelector("body").requestFullscreen) {
+//         document.querySelector("body").requestFullscreen();
+//     }
+//     else if(document.querySelector("body").webkitRequestFullScreen) {
+//         document.querySelector("body").webkitRequestFullScreen(); 
+//     }
+//     else if(document.querySelector("body").mozRequestFullScreen) {
+//         document.querySelector("body").mozRequestFullScreen(); 
+//     }
+//     else if(document.querySelector("body").msRequestFullscreen) {
+//         document.querySelector("body").msRequestFullscreen(); 
+//     }    
+//     window.screen.orientation.lock("portrait");
+// }
+
+
+document.getElementById("laptopScreen").addEventListener("click", function() {
+    document.documentElement.requestFullScreen();
+    screen.orientation.lock("portrait-primary");
+    }, false);
+
 
 
 
