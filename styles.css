@@ -108,8 +108,8 @@ body {
     position: absolute;
     bottom: 1vw;
     right: 1vw;
-    width: 52vw;
-    height: 48vw;
+    width: 60vw;
+    height: 56vw;
     background-color: black;
     border: 1vw solid black;
     border-radius: 5%;
@@ -118,30 +118,32 @@ body {
 
 #laptopPic {
     position: absolute;
-    width: 51vw;
-    height: 47vw;
+    width: 59vw;
+    height: 55vw;
     border: 1vw solid black;
     border-radius: 5%;
+    overflow: clip;
 }
 
 #laptopGif {
     position: absolute;
-    width: 51vw;
-    height: 47vw;
+    width: 59vw;
+    height: 55vw;
     border: 1vw solid black;
     border-radius: 5%;
+    overflow: clip;
 }
 
 #laptopScreen {
     position: absolute;
     top: 5vw;
     left: 3vw;
-    width: 44.5vw;
-    height: 23vw;
+    width: 52.5vw;
+    height: 31vw;
     background-color: #ede1d1;
     padding: 1vw;
     color: black;
-    font-size: 3vw;
+    font-size: 3.5vw;
     font-family: 'Roboto', monospace;
     text-align: left;
 } 
@@ -150,26 +152,26 @@ body {
     position: absolute;
     top: 5vw;
     left: 3vw;
-    width: 44.5vw;
-    height: 23vw;
+    width: 52.5vw;
+    height: 31vw;
     background-color: #ede1d1;
     padding: 1vw;
     color: black;
-    font-size: 3vw;
+    font-size: 3.5vw;
     font-family: 'Roboto', monospace;
-    text-align: left; 
+    text-align: left;
 }
 
 #empty {
     position: absolute;
     top: 5vw;
     left: 3vw;
-    width: 44.5vw;
-    height: 23vw;
+    width: 52.5vw;
+    height: 31vw;
     background-color: #ede1d1;
     padding: 1vw;
     color: black;
-    font-size: 3vw;
+    font-size: 3.5vw;
     font-family: 'Roboto', monospace;
     text-align: left;
 }
