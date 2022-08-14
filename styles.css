@@ -150,13 +150,12 @@ body {
 }
 
 #laptopScreen {
-    background-color: aqua;
     position: absolute;
     top: 5vw;
     left: 3.5vw;
     width: 52vw;
     height: 28vw;
-    /* background-color: #ede1d1; */
+    background-color: #ede1d1;
     padding: 1vw;
     color: black;
     font-size: 3.5vw;
@@ -165,13 +164,12 @@ body {
 } 
 
 #laptopScreenEmpty {
-    background-color: aqua;
     position: absolute;
     top: 5vw;
     left: 3.5vw;
     width: 52vw;
     height: 28vw;
-    /* background-color: #ede1d1; */
+    background-color: #ede1d1;
     padding: 1vw;
     color: black;
     font-size: 3.5vw;
@@ -180,13 +178,12 @@ body {
 }
 
 #empty {
-    background-color: aqua;
     position: absolute;
     top: 5vw;
     left: 3.5vw;
     width: 52vw;
     height: 28vw;
-    /* background-color: #ede1d1; */
+    background-color: #ede1d1;
     padding: 1vw;
     color: black;
     font-size: 3.5vw;
