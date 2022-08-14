@@ -2,6 +2,8 @@
 // screen.orientation.lock("portrait");
 // screen.orientation.lock("portrait-primary");
 
+window.screen.orientation.lock("portrait-primary");
+
 //Dealing with viewport height issue (when browser address bar hides the viewport gets higher - we don't want that)
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
