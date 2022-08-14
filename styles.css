@@ -144,6 +144,7 @@ body {
 }
 
 #laptopScreen {
+    background-color: aqua;
     position: absolute;
     top: 5vw;
     left: 3vw;
@@ -158,6 +159,7 @@ body {
 } 
 
 #laptopScreenEmpty {
+    background-color: aqua;
     position: absolute;
     top: 5vw;
     left: 3vw;
@@ -172,6 +174,7 @@ body {
 }
 
 #empty {
+    background-color: aqua;
     position: absolute;
     top: 5vw;
     left: 3vw;
