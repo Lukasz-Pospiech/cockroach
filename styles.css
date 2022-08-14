@@ -15,9 +15,9 @@
     position: fixed;
     top: 20vw;
     left: 20vw;
-    width: 50vw;
-    height: 50vw;
-    z-index: 300;
+    width: 70vw;
+    height: 70vw;
+    z-index: 200;
     background-color: black;
     padding: 10vw;
     color: white;
