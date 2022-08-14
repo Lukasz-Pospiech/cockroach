@@ -26,12 +26,10 @@
 // }
 
 
-document.getElementById("laptopScreen").addEventListener("click", function() {
-    document.documentElement.requestFullScreen();
-    screen.orientation.lock("portrait-primary");
-    }, false);
-
-
+// document.getElementById("laptopScreen").addEventListener("click", function() {
+//     document.documentElement.requestFullScreen();
+//     screen.orientation.lock("portrait-primary");
+//     }, false);
 
 
 
