@@ -1,13 +1,31 @@
 //LOCK SCREEN ORIENTATION ON PHONES (ONLY PORTRAIT ORIENTATION) 
+// function lockOrientation() {
+//     // GO INTO FULL SCREEN FIRST
+//     let de = document.documentElement;  //returns html element
+//     if (de.requestFullscreen) { de.requestFullscreen(); }
+//     else if (de.mozRequestFullScreen) { de.mozRequestFullScreen(); }
+//     else if (de.webkitRequestFullscreen) { de.webkitRequestFullscreen(); }
+//     else if (de.msRequestFullscreen) { de.msRequestFullscreen(); }
+//     screen.orientation.lock("portrait-primary");
+// }
+
 function lockOrientation() {
-    // GO INTO FULL SCREEN FIRST
-    let de = document.documentElement;  //returns html element
-    if (de.requestFullscreen) { de.requestFullscreen(); }
-    else if (de.mozRequestFullScreen) { de.mozRequestFullScreen(); }
-    else if (de.webkitRequestFullscreen) { de.webkitRequestFullscreen(); }
-    else if (de.msRequestFullscreen) { de.msRequestFullscreen(); }
+    if(document.querySelector("body").requestFullscreen) {
+        document.querySelector("body").requestFullscreen();
+    }
+    else if(document.querySelector("body").webkitRequestFullScreen) {
+        document.querySelector("body").webkitRequestFullScreen(); 
+    }
+    else if(document.querySelector("body").mozRequestFullScreen) {
+        document.querySelector("body").mozRequestFullScreen(); 
+    }
+    else if(document.querySelector("body").msRequestFullscreen) {
+        document.querySelector("body").msRequestFullscreen(); 
+    }    
     screen.orientation.lock("portrait-primary");
 }
+
+
 
 //Dealing with viewport height issue (when browser address bar hides the viewport gets higher - we don't want that)
 let vh = window.innerHeight * 0.01;
