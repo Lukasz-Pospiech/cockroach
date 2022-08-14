@@ -22,8 +22,9 @@ function lockOrientation() {
     else if(document.querySelector("body").msRequestFullscreen) {
         document.querySelector("body").msRequestFullscreen(); 
     }    
-    screen.orientation.lock("portrait-primary");
+    window.screen.orientation.lock("portrait");
 }
+
 
 
 
