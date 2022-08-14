@@ -1,21 +1,31 @@
 //LOCK SCREEN ORIENTATION ON PHONES (ONLY PORTRAIT ORIENTATION) 
 
-function showWarning() {
-    if (screen.orientation) { // Property doesn't exist on screen in IE11   
-        screen.orientation.addEventListener("change", redirect);
-    }
-    
-    function redirect() {
-        // let warning = document.getElementById("wrongOrientationWarningDIV");
-        if (document.getElementById("wrongOrientationWarningDIV").style.display === "none") {
-            document.getElementById("wrongOrientationWarningDIV").style.display = "block";
-        } 
-        else if (document.getElementById("wrongOrientationWarningDIV").style.display === "block") {
-            document.getElementById("wrongOrientationWarningDIV").style.display = "none";
-        }
-    }
-}
+// function showWarning() {
+//     if (screen.orientation) { // Property doesn't exist on screen in IE11   
+//         screen.orientation.addEventListener("change", redirect);
+//     }
+//     function redirect() {
+//         // let warning = document.getElementById("wrongOrientationWarningDIV");
+//         if (document.getElementById("wrongOrientationWarningDIV").style.display === "none") {
+//             document.getElementById("wrongOrientationWarningDIV").style.display = "block";
+//         } 
+//         else if (document.getElementById("wrongOrientationWarningDIV").style.display === "block") {
+//             document.getElementById("wrongOrientationWarningDIV").style.display = "none";
+//         }
+//     }
+// }
 
+function showWarning() {
+    let portrait = window.matchMedia("(orientation: portrait)");
+
+    portrait.addEventListener("change", function(e) {
+    if(e.matches) {
+        document.getElementById("wrongOrientationWarningDIV").style.display = "none";
+    } else {
+        document.getElementById("wrongOrientationWarningDIV").style.display = "block";
+    }
+})
+}
 
 // function lockOrientation() {
 //     // GO INTO FULL SCREEN FIRST
