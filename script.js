@@ -2,9 +2,9 @@
 
 function showWarning() {
     // if (screen.orientation) { // Property doesn't exist on screen in IE11   
-        screen.orientation.addEventListener("change", showWarning);
+        screen.orientation.addEventListener("change", redirect);
     
-    function showWarning() {
+    function redirect() {
         // let warning = document.getElementById("wrongOrientationWarningDIV");
         if (document.getElementById("wrongOrientationWarningDIV").style.display === "none") {
             document.getElementById("wrongOrientationWarningDIV").style.display = "block";
