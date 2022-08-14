@@ -1,6 +1,6 @@
 //LOCK SCREEN ORIENTATION ON PHONES (ONLY PORTRAIT ORIENTATION) 
-screen.orientation.lock("portrait");
-screen.orientation.lock("portrait-primary");
+// screen.orientation.lock("portrait");
+// screen.orientation.lock("portrait-primary");
 
 //Dealing with viewport height issue (when browser address bar hides the viewport gets higher - we don't want that)
 let vh = window.innerHeight * 0.01;
