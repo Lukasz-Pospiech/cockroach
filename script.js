@@ -5,12 +5,12 @@ function showWarning() {
         screen.orientation.addEventListener("change", showWarning);
     
     function showWarning() {
-        let warning = document.getElementById("wrongOrientationWarningDIV");
-        if (warning.style.display === "none") {
-            warning.style.display = "block";
+        // let warning = document.getElementById("wrongOrientationWarningDIV");
+        if (document.getElementById("wrongOrientationWarningDIV").style.display === "none") {
+            document.getElementById("wrongOrientationWarningDIV").style.display = "block";
         } 
-        else if (warning.style.display === "block") {
-            warning.style.display = "none";
+        else if (document.getElementById("wrongOrientationWarningDIV").style.display === "block") {
+            document.getElementById("wrongOrientationWarningDIV").style.display = "none";
         }
         // document.getElementById("wrongOrientationWarningDIV").style.display = "block"; 
     }
