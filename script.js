@@ -1,8 +1,9 @@
 //LOCK SCREEN ORIENTATION ON PHONES (ONLY PORTRAIT ORIENTATION) 
 
 function showWarning() {
-    // if (screen.orientation) { // Property doesn't exist on screen in IE11   
+    if (screen.orientation) { // Property doesn't exist on screen in IE11   
         screen.orientation.addEventListener("change", redirect);
+    }
     
     function redirect() {
         // let warning = document.getElementById("wrongOrientationWarningDIV");
@@ -12,7 +13,6 @@ function showWarning() {
         else if (document.getElementById("wrongOrientationWarningDIV").style.display === "block") {
             document.getElementById("wrongOrientationWarningDIV").style.display = "none";
         }
-        // document.getElementById("wrongOrientationWarningDIV").style.display = "block"; 
     }
 }
 
