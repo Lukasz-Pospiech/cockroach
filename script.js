@@ -16,8 +16,31 @@
 // }
 
 function showWarning() {
-    let portrait = window.matchMedia("(orientation: portrait)");
-    portrait.addEventListener("change", function(e) {
+    let verticalView = window.matchMedia("(orientation: portrait)");
+    let horizontalView = window.matchMedia("(orientation: landscape)");
+    if (horizontalView) {
+        document.getElementById("wrongOrientationWarningDIV").style.display = "block";
+        setTimeout(changeOpacities(), 4000);
+        function changeOpacities() {
+            document.getElementById("morpheus").style.opacity = "0";
+            document.getElementById("phoneRotate").style.opacity = "1";
+        }
+    }
+
+    verticalView.addEventListener("change", function(e) {
+        if(!e.matches) {
+            document.getElementById("wrongOrientationWarningDIV").style.display = "none";
+        } else {
+            document.getElementById("wrongOrientationWarningDIV").style.display = "block";
+            setTimeout(changeOpacities(), 4000);
+            function changeOpacities() {
+                document.getElementById("morpheus").style.opacity = "0";
+                document.getElementById("phoneRotate").style.opacity = "1";
+            }
+        }
+    })
+
+    verticalView.addEventListener("change", function(e) {
     if(e.matches) {
         document.getElementById("wrongOrientationWarningDIV").style.display = "none";
     } else {
