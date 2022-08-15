@@ -27,7 +27,7 @@ function showWarning() {
         }
     }
 
-    verticalView.addEventListener("change", function(e) {
+    horizontalView.addEventListener("change", function(e) {
         if(!e.matches) {
             document.getElementById("wrongOrientationWarningDIV").style.display = "none";
         } else {
@@ -41,17 +41,17 @@ function showWarning() {
     })
 
     verticalView.addEventListener("change", function(e) {
-    if(e.matches) {
-        document.getElementById("wrongOrientationWarningDIV").style.display = "none";
-    } else {
-        document.getElementById("wrongOrientationWarningDIV").style.display = "block";
-        setTimeout(changeOpacities(), 4000);
-        function changeOpacities() {
-            document.getElementById("morpheus").style.opacity = "0";
-            document.getElementById("phoneRotate").style.opacity = "1";
+        if(e.matches) {
+            document.getElementById("wrongOrientationWarningDIV").style.display = "none";
+        } else {
+            document.getElementById("wrongOrientationWarningDIV").style.display = "block";
+            setTimeout(changeOpacities(), 4000);
+            function changeOpacities() {
+                document.getElementById("morpheus").style.opacity = "0";
+                document.getElementById("phoneRotate").style.opacity = "1";
+            }
         }
-    }
-})
+    })
 }
 
 // function lockOrientation() {
