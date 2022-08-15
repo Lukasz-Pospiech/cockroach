@@ -15,7 +15,7 @@
 //     }
 // }
 
-function showWarning() {
+// function showWarning() {
     let verticalView = window.matchMedia("(orientation: portrait)");
     let horizontalView = window.matchMedia("(orientation: landscape)");
 
@@ -24,13 +24,17 @@ function showWarning() {
 
     function warning1() {
         document.getElementById("wrongOrientationWarningDIV").style.display = "none";
+        document.getElementById("morpheus").style.display = "none";
+        document.getElementById("phoneRotate").style.display = "none";
     }
 
     function warning2() {
         document.getElementById("wrongOrientationWarningDIV").style.display = "block";
-        setTimeout(changeOpacities(), 4000);
+        document.getElementById("morpheus").style.display = "block";
+        setTimeout(changeOpacities, 4000);
         function changeOpacities() {
             document.getElementById("morpheus").style.opacity = "0";
+            document.getElementById("phoneRotate").style.display = "block";
             document.getElementById("phoneRotate").style.opacity = "1"; 
         } 
     }  
@@ -47,32 +51,32 @@ function showWarning() {
     //     }
     // }
 
-    horizontalView.addEventListener("change", function(e) {
-        if(!e.matches) {
-            document.getElementById("wrongOrientationWarningDIV").style.display = "none";
-        } else {
-            document.getElementById("wrongOrientationWarningDIV").style.display = "block";
-            setTimeout(changeOpacities(), 4000);
-            function changeOpacities() {
-                document.getElementById("morpheus").style.opacity = "0";
-                document.getElementById("phoneRotate").style.opacity = "1";
-            }
-        }
-    })
+//     horizontalView.addEventListener("change", function(e) {
+//         if(!e.matches) {
+//             document.getElementById("wrongOrientationWarningDIV").style.display = "none";
+//         } else {
+//             document.getElementById("wrongOrientationWarningDIV").style.display = "block";
+//             setTimeout(changeOpacities(), 4000);
+//             function changeOpacities() {
+//                 document.getElementById("morpheus").style.opacity = "0";
+//                 document.getElementById("phoneRotate").style.opacity = "1";
+//             }
+//         }
+//     })
 
-    verticalView.addEventListener("change", function(e) {
-        if(e.matches) {
-            document.getElementById("wrongOrientationWarningDIV").style.display = "none";
-        } else {
-            document.getElementById("wrongOrientationWarningDIV").style.display = "block";
-            setTimeout(changeOpacities(), 4000);
-            function changeOpacities() {
-                document.getElementById("morpheus").style.opacity = "0";
-                document.getElementById("phoneRotate").style.opacity = "1";
-            }
-        }
-    })
-}
+//     verticalView.addEventListener("change", function(e) {
+//         if(e.matches) {
+//             document.getElementById("wrongOrientationWarningDIV").style.display = "none";
+//         } else {
+//             document.getElementById("wrongOrientationWarningDIV").style.display = "block";
+//             setTimeout(changeOpacities(), 4000);
+//             function changeOpacities() {
+//                 document.getElementById("morpheus").style.opacity = "0";
+//                 document.getElementById("phoneRotate").style.opacity = "1";
+//             }
+//         }
+//     })
+// }
 
 // function lockOrientation() {
 //     // GO INTO FULL SCREEN FIRST
@@ -105,7 +109,7 @@ function showWarning() {
 //     document.documentElement.requestFullScreen();
 //     screen.orientation.lock("portrait-primary");
 //     }, false);
-
+// }
 
 
 //Dealing with viewport height issue (when browser address bar hides the viewport gets higher - we don't want that)
