@@ -18,14 +18,34 @@
 function showWarning() {
     let verticalView = window.matchMedia("(orientation: portrait)");
     let horizontalView = window.matchMedia("(orientation: landscape)");
-    if (horizontalView) {
+
+    if (verticalView.matches) warning1();
+    if (horizontalView.matches) warning2();
+
+    function warning1() {
+        document.getElementById("wrongOrientationWarningDIV").style.display = "none";
+    }
+
+    function warning2() {
         document.getElementById("wrongOrientationWarningDIV").style.display = "block";
         setTimeout(changeOpacities(), 4000);
         function changeOpacities() {
             document.getElementById("morpheus").style.opacity = "0";
-            document.getElementById("phoneRotate").style.opacity = "1";
-        }
-    }
+            document.getElementById("phoneRotate").style.opacity = "1"; 
+        } 
+    }  
+
+    // verticalView.addListener(warning1);
+    // horizontalView.addListener(warning2);
+
+    // if (horizontalView) {
+    //     document.getElementById("wrongOrientationWarningDIV").style.display = "block";
+    //     setTimeout(changeOpacities(), 4000);
+    //     function changeOpacities() {
+    //         document.getElementById("morpheus").style.opacity = "0";
+    //         document.getElementById("phoneRotate").style.opacity = "1";
+    //     }
+    // }
 
     horizontalView.addEventListener("change", function(e) {
         if(!e.matches) {
