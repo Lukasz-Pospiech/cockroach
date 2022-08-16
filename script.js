@@ -1,5 +1,28 @@
 //LOCK SCREEN ORIENTATION ON PHONES (ONLY PORTRAIT ORIENTATION) 
 
+var mql = window.matchMedia("(orientation: portrait)");
+
+// If there are matches, we're in portrait
+if(mql.matches) {
+       document.getElementById("wrongOrientationWarningDIV").style.display = "none";
+       document.getElementById("morpheus").style.display = "none";
+} else {
+  // Landscape orientation
+   document.getElementById("wrongOrientationWarningDIV").style.display = "block";
+   document.getElementById("morpheus").style.display = "block";
+}
+
+// // Add a media query change listener
+// mql.addListener(function(m) {
+//   if(m.matches) {
+//     // Changed to portrait
+//   }
+//   else {
+//     // Changed to landscape
+//   }
+// });
+
+
 // function showWarning() {
 //     if (screen.orientation) { // Property doesn't exist on screen in IE11   
 //         screen.orientation.addEventListener("change", redirect);
@@ -17,27 +40,27 @@
 
 // function showWarning() {
     // let verticalView = window.matchMedia("(orientation: portrait)");
-    let horizontalView = window.matchMedia("(orientation: landscape)");
+    // let horizontalView = window.matchMedia("(orientation: landscape)");
 
-    // if (verticalView.matches) warning1();
-    if (horizontalView.matches) warning2();
+    // // if (verticalView.matches) warning1();
+    // if (horizontalView.matches) warning2();
 
-    // function warning1() {
-    //     document.getElementById("wrongOrientationWarningDIV").style.display = "none";
-    //     document.getElementById("morpheus").style.display = "none";
-    //     document.getElementById("phoneRotate").style.display = "none";
-    // }
+    // // function warning1() {
+    // //     document.getElementById("wrongOrientationWarningDIV").style.display = "none";
+    // //     document.getElementById("morpheus").style.display = "none";
+    // //     document.getElementById("phoneRotate").style.display = "none";
+    // // }
 
-    function warning2() {
-        document.getElementById("wrongOrientationWarningDIV").style.display = "block";
-        document.getElementById("morpheus").style.display = "block";
-    //     setTimeout(changeOpacities, 4000);
-    //     function changeOpacities() {
-    //         document.getElementById("morpheus").style.opacity = "0";
-    //         document.getElementById("phoneRotate").style.display = "block";
-    //         document.getElementById("phoneRotate").style.opacity = "1"; 
-    //     } 
-    }  
+    // function warning2() {
+    //     document.getElementById("wrongOrientationWarningDIV").style.display = "block";
+    //     document.getElementById("morpheus").style.display = "block";
+    // //     setTimeout(changeOpacities, 4000);
+    // //     function changeOpacities() {
+    // //         document.getElementById("morpheus").style.opacity = "0";
+    // //         document.getElementById("phoneRotate").style.display = "block";
+    // //         document.getElementById("phoneRotate").style.opacity = "1"; 
+    // //     } 
+    // }  
 
     // verticalView.addListener(warning1);
     // horizontalView.addListener(warning2);
