@@ -1,16 +1,36 @@
 //LOCK SCREEN ORIENTATION ON PHONES (ONLY PORTRAIT ORIENTATION) 
 
-var mql = window.matchMedia("(orientation: portrait)");
+function addMQListener(mq, callback) {
+    if (mq.addEventListener) {
+      mq.addEventListener("change", callback);
+    } else {
+      mq.addListener(callback);
+    }
+  }
+  
+  addMQListener(window.matchMedia("(orientation:landscape)"),
+    (event) => {
+      if (event.matches) {
+        document.getElementById("wrongOrientationWarningDIV").style.display = "block";
+      } else {
+        document.getElementById("wrongOrientationWarningDIV").style.display = "none";
+      }
+    }
+  );
 
-// If there are matches, we're in portrait
-if(mql.matches) {
-       document.getElementById("wrongOrientationWarningDIV").style.display = "none";
-       document.getElementById("morpheus").style.display = "none";
-} else {
-  // Landscape orientation
-   document.getElementById("wrongOrientationWarningDIV").style.display = "block";
-   document.getElementById("morpheus").style.display = "block";
-}
+
+
+// var mql = window.matchMedia("(orientation: portrait)");
+
+// // If there are matches, we're in portrait
+// if(mql.matches) {
+//        document.getElementById("wrongOrientationWarningDIV").style.display = "none";
+//        document.getElementById("morpheus").style.display = "none";
+// } else {
+//   // Landscape orientation
+//    document.getElementById("wrongOrientationWarningDIV").style.display = "block";
+//    document.getElementById("morpheus").style.display = "block";
+// }
 
 // // Add a media query change listener
 // mql.addListener(function(m) {
