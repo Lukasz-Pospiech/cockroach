@@ -1,16 +1,4 @@
 /* WHEN USER ROTATES PHONE SCREEN TO HORIZONTAL, HE GETS A WARNING */
-/* @media only screen and (orientation:landscape) {
-    #wrongOrientationWarningDIV {
-        display: block;
-    }
-} 
-@media only screen and (orientation:portrait) {
-    #wrongOrientationWarningDIV {
-        display: none;
-    }
-}  */
-
-/* WHEN USER ROTATES PHONE SCREEN TO HORIZONTAL, HE GETS A WARNING */
 #wrongOrientationWarningDIV {
     display: none;
     position: fixed;
@@ -22,29 +10,25 @@
     background-color: black;
 }
 
-/* #morpheus {
-    display: none;
-    position: fixed;
+#morpheus {
+    position: absolute;
     top: 0;
     left: 0;
-    width: 80vw;
-    height: calc(var(--vh, 1vh) * 80);
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
     opacity: 1; 
     transition: opacity 1s;
-    z-index: 201;
-} */
+}
 
-/* #phoneRotate {
-    display: none;
-    position: fixed;
+#phoneRotate {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: calc(var(--vh, 1vh) * 100);
     opacity: 0; 
     transition: opacity 1s;
-    z-index: 202;
-} */
+}
 
 
 * {
