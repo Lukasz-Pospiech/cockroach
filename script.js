@@ -1,15 +1,88 @@
-//LOCK SCREEN ORIENTATION ON PHONES (ONLY PORTRAIT ORIENTATION) 
+//WHEN USER ROTATES PHONE SCREEN TO HORIZONTAL, HE GETS A WARNING
 
-const mql = window.matchMedia('(orientation:landscape)');
+const verticalView = window.matchMedia("(orientation: portrait)");
+const horizontalView = window.matchMedia("(orientation: landscape)");
 
-mql.onchange = (e) => {
-    if (e.matches) {
+function checkOrientation() {
+    if (horizontalView.matches) {
         document.getElementById("wrongOrientationWarningDIV").style.display = "block";
-    } else {
-    
+        setTimeout(changeOpacities, 5000);
+        function changeOpacities() {
+            document.getElementById("morpheus").style.opacity = "0";
+            document.getElementById("phoneRotate").style.opacity = "1"; 
+        } 
+        horizontalView.onchange = (e) => {
+            if (!e.matches) {
+                document.getElementById("wrongOrientationWarningDIV").style.display = "none";
+            } 
+        }
+    }
+    else if (verticalView.matches) {
         document.getElementById("wrongOrientationWarningDIV").style.display = "none";
-  }
+        verticalView.onchange = (e) => {
+            if (!e.matches) {
+                document.getElementById("wrongOrientationWarningDIV").style.display = "block";
+                setTimeout(changeOpacities, 5000);
+                function changeOpacities() {
+                    document.getElementById("morpheus").style.opacity = "0";
+                    document.getElementById("phoneRotate").style.opacity = "1"; 
+                } 
+            } 
+        }
+    }
 }
+
+verticalView.onchange = (e) => {
+    if (!e.matches) {
+        document.getElementById("wrongOrientationWarningDIV").style.display = "block";
+        setTimeout(changeOpacities, 5000);
+        function changeOpacities() {
+            document.getElementById("morpheus").style.opacity = "0";
+            document.getElementById("phoneRotate").style.opacity = "1"; 
+        }
+    } 
+}
+
+horizontalView.onchange = (e) => {
+    if (!e.matches) {
+        document.getElementById("wrongOrientationWarningDIV").style.display = "none";
+    } 
+}
+
+
+
+// verticalView.onchange = (e) => {
+//     if (e.matches) {
+//         document.getElementById("wrongOrientationWarningDIV").style.display = "none";
+//         document.getElementById("morpheus").style.display = "none";
+//     } else {
+//         document.getElementById("wrongOrientationWarningDIV").style.display = "block"
+//         document.getElementById("morpheus").style.display = "block"
+//   }
+// }
+
+// if (verticalView.matches) {
+//     document.getElementById("wrongOrientationWarningDIV").style.display = "none";
+//     document.getElementById("morpheus").style.display = "none";
+// }
+
+// if (horizontalView.matches) {
+//     document.getElementById("wrongOrientationWarningDIV").style.display = "block";
+//     document.getElementById("morpheus").style.display = "block";
+// }
+
+
+
+//DZIALA!
+// const mql = window.matchMedia('(orientation:landscape)');
+// mql.onchange = (e) => {
+//     if (e.matches) {
+//         document.getElementById("wrongOrientationWarningDIV").style.display = "block";
+//         document.getElementById("morpheus").style.display = "block";
+//     } else {
+//         document.getElementById("wrongOrientationWarningDIV").style.display = "none";
+//   }
+// }
 
 
 
