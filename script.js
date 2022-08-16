@@ -16,27 +16,27 @@
 // }
 
 // function showWarning() {
-    let verticalView = window.matchMedia("(orientation: portrait)");
+    // let verticalView = window.matchMedia("(orientation: portrait)");
     let horizontalView = window.matchMedia("(orientation: landscape)");
 
-    if (verticalView.matches) warning1();
+    // if (verticalView.matches) warning1();
     if (horizontalView.matches) warning2();
 
-    function warning1() {
-        document.getElementById("wrongOrientationWarningDIV").style.display = "none";
-        document.getElementById("morpheus").style.display = "none";
-        document.getElementById("phoneRotate").style.display = "none";
-    }
+    // function warning1() {
+    //     document.getElementById("wrongOrientationWarningDIV").style.display = "none";
+    //     document.getElementById("morpheus").style.display = "none";
+    //     document.getElementById("phoneRotate").style.display = "none";
+    // }
 
     function warning2() {
         document.getElementById("wrongOrientationWarningDIV").style.display = "block";
         document.getElementById("morpheus").style.display = "block";
-        setTimeout(changeOpacities, 4000);
-        function changeOpacities() {
-            document.getElementById("morpheus").style.opacity = "0";
-            document.getElementById("phoneRotate").style.display = "block";
-            document.getElementById("phoneRotate").style.opacity = "1"; 
-        } 
+    //     setTimeout(changeOpacities, 4000);
+    //     function changeOpacities() {
+    //         document.getElementById("morpheus").style.opacity = "0";
+    //         document.getElementById("phoneRotate").style.display = "block";
+    //         document.getElementById("phoneRotate").style.opacity = "1"; 
+    //     } 
     }  
 
     // verticalView.addListener(warning1);
@@ -51,31 +51,31 @@
     //     }
     // }
 
-    horizontalView.addEventListener("change", function(e) {
-        if(!e.matches) {
-            document.getElementById("wrongOrientationWarningDIV").style.display = "none";
-        } else {
-            document.getElementById("wrongOrientationWarningDIV").style.display = "block";
-            setTimeout(changeOpacities(), 4000);
-            function changeOpacities() {
-                document.getElementById("morpheus").style.opacity = "0";
-                document.getElementById("phoneRotate").style.opacity = "1";
-            }
-        }
-    })
+    // horizontalView.addEventListener("change", function(e) {
+    //     if(!e.matches) {
+    //         document.getElementById("wrongOrientationWarningDIV").style.display = "none";
+    //     } else {
+    //         document.getElementById("wrongOrientationWarningDIV").style.display = "block";
+    //         setTimeout(changeOpacities(), 4000);
+    //         function changeOpacities() {
+    //             document.getElementById("morpheus").style.opacity = "0";
+    //             document.getElementById("phoneRotate").style.opacity = "1";
+    //         }
+    //     }
+    // })
 
-    verticalView.addEventListener("change", function(e) {
-        if(e.matches) {
-            document.getElementById("wrongOrientationWarningDIV").style.display = "none";
-        } else {
-            document.getElementById("wrongOrientationWarningDIV").style.display = "block";
-            setTimeout(changeOpacities(), 4000);
-            function changeOpacities() {
-                document.getElementById("morpheus").style.opacity = "0";
-                document.getElementById("phoneRotate").style.opacity = "1";
-            }
-        }
-    })
+    // verticalView.addEventListener("change", function(e) {
+    //     if(e.matches) {
+    //         document.getElementById("wrongOrientationWarningDIV").style.display = "none";
+    //     } else {
+    //         document.getElementById("wrongOrientationWarningDIV").style.display = "block";
+    //         setTimeout(changeOpacities(), 4000);
+    //         function changeOpacities() {
+    //             document.getElementById("morpheus").style.opacity = "0";
+    //             document.getElementById("phoneRotate").style.opacity = "1";
+    //         }
+    //     }
+    // })
 
 
 // function lockOrientation() {
