@@ -1,22 +1,35 @@
 //LOCK SCREEN ORIENTATION ON PHONES (ONLY PORTRAIT ORIENTATION) 
 
-function addMQListener(mq, callback) {
-    if (mq.addEventListener) {
-      mq.addEventListener("change", callback);
-    } else {
-      mq.addListener(callback);
-    }
-  }
-  
-  addMQListener(window.matchMedia("(orientation:landscape)"),
-    (event) => {
-      if (event.matches) {
+const mql = window.matchMedia('(orientation:landscape)');
+
+mql.onchange = (e) => {
+    if (e.matches) {
         document.getElementById("wrongOrientationWarningDIV").style.display = "block";
-      } else {
+    } else {
+    
         document.getElementById("wrongOrientationWarningDIV").style.display = "none";
-      }
-    }
-  );
+  }
+}
+
+
+
+// function addMQListener(mq, callback) {
+//     if (mq.addEventListener) {
+//       mq.addEventListener("change", callback);
+//     } else {
+//       mq.addListener(callback);
+//     }
+//   }
+  
+//   addMQListener(window.matchMedia("(orientation:landscape)"),
+//     (event) => {
+//       if (event.matches) {
+//         document.getElementById("wrongOrientationWarningDIV").style.display = "block";
+//       } else {
+//         document.getElementById("wrongOrientationWarningDIV").style.display = "none";
+//       }
+//     }
+//   );
 
 
 
