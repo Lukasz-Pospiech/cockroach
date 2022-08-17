@@ -8,24 +8,25 @@
     height: calc(var(--vh, 1vh) * 100);
     z-index: 200; 
     background-color: black;
+    text-align: center;
 }
 
 #morpheus {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: calc(var(--vh, 1vh) * 100);
+    top: calc(var(--vh, 1vh) * 10);;
+    left: 20vw;
+    width: 60vw;
+    height: calc(var(--vh, 1vh) * 80);
     opacity: 1; 
     transition: opacity 1s;
 }
 
 #phoneRotate {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: calc(var(--vh, 1vh) * 100);
+    top: calc(var(--vh, 1vh) * 10);;
+    left: 30vw;
+    width: 40vw;
+    height: calc(var(--vh, 1vh) * 80);
     opacity: 0; 
     transition: opacity 1s;
 }
